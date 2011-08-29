@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        Velkommen til XAF Web Solution!!
+        Velkommen til XAF Administration System!!
     </h2>
     <p>
         I denne iteration er der ingen login funktion og alle brugere har adgang til det hele.
