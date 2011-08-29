@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace XAF
+{
+    public class Main
+    {
+<<<<<<< HEAD
+        //User userObj = new User("Benjamin", "Chr", "123456");
+=======
+        User userObj = new User("Benjamin", "Chr", 123456);
+>>>>>>> f2d42ae2460ea64f3d1ffb19e51e167d3607ed6a
+
+        //public Main()
+        //{
+        //    userObj.CreateUser(userObj);
+        //}
+    }
+}
