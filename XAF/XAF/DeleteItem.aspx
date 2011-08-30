@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DeleteOrder.aspx.cs" Inherits="XAF.DeleteOrder" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DeleteItem.aspx.cs" Inherits="XAF.DeleteItem" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -14,12 +14,12 @@
             <td>
                 <table>
                     <tr>
-                        <td>Ordrenummer:</td>
-                        <td><asp:Textbox id="txtOrderID" runat="server" /></td>
+                        <td>Artikel nummer:</td>
+                        <td><asp:Textbox id="txtItemID" runat="server" /></td>
                     </tr>
                     <tr>
                         <td align="center" colspan="2">
-                        <asp:Button id="btnDeleteOrder" text="Slet" runat="server" onclick="btnDeleteOrder_Click" /></td>
+                        <asp:Button id="btnDeleteItem" text="Slet" runat="server" onclick="btnDeleteItem_Click" /></td>
                     </tr>
                 </table>
             </td>
