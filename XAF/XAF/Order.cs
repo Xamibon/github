@@ -14,7 +14,7 @@ namespace XAF
         private int _orderID;
         private DateTime _orderCreatedDate;
         private int _orderCreatedBy;
-        private ArrayList _orderItemList;
+        private ArrayList _orderArrItemList;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Order"/> class
@@ -27,7 +27,7 @@ namespace XAF
             _orderID = orderID;
             _orderCreatedDate = createdDate;
             _orderCreatedBy = userID;
-            _orderItemList = new ArrayList();
+            _orderArrItemList = new ArrayList();
         }
 
         /// <summary>
@@ -84,15 +84,15 @@ namespace XAF
             }
         }
 
-        public ArrayList OrderItemList
+        public ArrayList OrderArrItemList
         {
             set
             {
-                _orderItemList = value;
+                _orderArrItemList = value;
             }
             get
             {
-                return _orderItemList;
+                return _orderArrItemList;
             }
         }
     }

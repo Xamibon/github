@@ -29,7 +29,7 @@ namespace XAF
             _fakeDAL.Add(supp);
         }
 
-        public void DeleteSupplier(string supplierSE)
+        public void DeactivateSupplier(string supplierSE)
         {
             foreach (Supplier s in _fakeDAL.ToArray())
             {
@@ -65,7 +65,7 @@ namespace XAF
             return _searchResult;
         }
 
-        public void DeleteItem(int itemID)
+        public void DeactivateItem(int itemID)
         {
             throw new NotImplementedException();
         }
@@ -90,7 +90,7 @@ namespace XAF
             throw new NotImplementedException();
         }
 
-        public void DeleteUser(User user)
+        public void DeactivateUser(User user)
         {
             throw new NotImplementedException();
         }
@@ -100,7 +100,7 @@ namespace XAF
             throw new NotImplementedException();
         }
 
-        public void SaveUser(User user)
+        public void CreateUser(User user)
         {
             throw new NotImplementedException();
         }
