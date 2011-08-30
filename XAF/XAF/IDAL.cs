@@ -10,13 +10,13 @@ namespace XAF
     {
         void CreateSupplier(Supplier supp);
 
-        void DeleteSupplier(String supplierSE);
+        void DeactivateSupplier(String supplierSE);
 
         void EditSupplier(Supplier supplier);
 
         ArrayList SearchSupplier(String supplierSE);
 
-        void DeleteItem(int itemID);
+        void DeactivateItem(int itemID);
 
         void CreateItem(ArrayList item);
         
@@ -26,7 +26,7 @@ namespace XAF
 
         ArrayList SearchItem(int itemID);
 
-        void DeleteUser(User user);
+        void DeactivateUser(User user);
 
         void EditUser(User user);
 

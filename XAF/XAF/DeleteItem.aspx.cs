@@ -21,7 +21,7 @@ namespace XAF
         {
             iID = Convert.ToInt32(txtItemID.Text);
 
-            logicMgr.DeleteOrder(iID);
+            logicMgr.DeactivateItem(iID);
         }
     }
 }
