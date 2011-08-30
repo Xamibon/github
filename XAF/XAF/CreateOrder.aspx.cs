@@ -14,23 +14,33 @@ namespace XAF
         int iID;
         String iName;
         String iDesc;
-        int iSuppID;
-        decimal iPrice;
-        int iQty;
         DateTime dateCreated = DateTime.Now;
-        ArrayList arrItems = new ArrayList();
+        int uID = 1;
+        Order order;
+        ArrayList arrOrderItems;
+        ArrayList arrReturnedItems;
         LogicManager logicMgr;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             lblCreatedDate.Text = dateCreated.ToString("dd/mm/yyyy");
             lblCreatedBy.Text = "Systembruger";
+            
             logicMgr = LogicManager.GetLogicMgrInstance();
+
+            // Call the searchitems method from DAL and catch the returned data in a new arraylist
+            arrReturnedItems = logicMgr.GetAllItems();
+
+            order = logicMgr.CreateOrder(dateCreated, uID);
+            arrOrderItems = order.OrderArrItemList;
         }
 
         protected void btnAddItemToOrder_Click(object sender, EventArgs e)
         {
-            
+            decimal iPrice = 0;
+            int iQty;
+            int iSuppID = 0;
+
             // Get textbox values and store them in local variables
             iID = Convert.ToInt32(txtItemID.Text);
             iQty = Convert.ToInt32(txtItemQty.Text);
@@ -38,9 +48,6 @@ namespace XAF
             // Clear the textboxes
             txtItemID.Text = "";
             txtItemQty.Text = "";
-
-            // Call the searchitems method from DAL and catch the returned data in a new arraylist
-            ArrayList arrReturnedItems = logicMgr.GetAllItems();
 
             // Go thru the returned items to find a match for the item id entered.
             foreach (Item item in arrReturnedItems)
@@ -55,11 +62,16 @@ namespace XAF
             }
 
             // Create a new object of the selected item and store it in the list
-            for (int i = 0; i < iQty; i++) 
+            for (int i = 0; i < iQty; i++)
             {
                 Item item = new XAF.Item(iID, iName, iDesc, iSuppID, iPrice);
-                arrItems.Add(item);
+                arrOrderItems.Add(item);
             }
+        }
+
+        protected void btnSaveOrder_Click(object sender, EventArgs e)
+        {
+            logicMgr.SaveOrder(order);
         }
     }
 }

@@ -38,7 +38,7 @@
                     <tr>
                         <td align="center" colspan="2">
                         <asp:Button id="btnAddItemToOrder" text="Tilføj" runat="server" onclick="btnAddItemToOrder_Click" />
-                        <asp:button id="btnCreateOrder" text="Gem" runat="server"/></td>
+                        <asp:button id="btnSaveOrder" text="Gem" runat="server" onclick="btnSaveOrder_Click"/></td>
                     </tr>
                 </table>
             </td>

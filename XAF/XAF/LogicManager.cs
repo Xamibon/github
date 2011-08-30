@@ -155,10 +155,11 @@ namespace XAF
         /// Sends the object to the DAL class.
         /// </summary>
         /// <param name="order">Expecting an object order object.</param>
-        public void CreateOrder(int oID, DateTime oCreated, int uID)
+        public Order CreateOrder(DateTime oCreated, int uID)
         {
-            _logicMgrOrder = new Order(oID,oCreated,uID);
-            _logicMgrIDAL.CreateOrder(_logicMgrOrder);
+            _logicMgrOrder = new Order(oCreated, uID);
+            // _logicMgrIDAL.CreateOrder(_logicMgrOrder);
+            return _logicMgrOrder;
         }
 
         /// <summary>
@@ -178,6 +179,12 @@ namespace XAF
         {
             //DAL dalObj = DAL.Instance();
             //dalObj.EditOrder(OrderID, OrderItemList);
+        }
+
+        public void SaveOrder(Order order)
+        {
+            _logicMgrOrder = order;
+            _logicMgrIDAL.CreateOrder(_logicMgrOrder);
         }
 
         /// <summary>

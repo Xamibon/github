@@ -22,6 +22,14 @@ namespace XAF
         /// <param name="orderID">The order ID.</param>
         /// <param name="createdDate">The date this ordser was created.</param>
         /// <param name="createdBy">Id who created the order.</param>
+
+        public Order(DateTime createdDate, int userID)
+        {
+            _orderCreatedDate = createdDate;
+            _orderCreatedBy = userID;
+            _orderArrItemList = new ArrayList();
+        }
+        
         public Order(int orderID, DateTime createdDate, int userID)
         {
             _orderID = orderID;
