@@ -9,7 +9,7 @@ namespace XAF
 {
     public partial class DeleteSupplier : System.Web.UI.Page
     {
-        int sID;
+        String sID;
         LogicManager logicMgr;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -19,7 +19,7 @@ namespace XAF
 
         protected void btnDeleteSupplier_Click(object sender, EventArgs e)
         {
-            sID = Convert.ToInt32(txtSupplierID.Text);
+            sID = txtSupplierID.Text;
 
             logicMgr.DeactivateSupplier(sID);
         }
