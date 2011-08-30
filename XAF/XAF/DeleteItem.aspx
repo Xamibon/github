@@ -5,7 +5,7 @@
     <table>
         <tr>
             <td>
-                <h3>Slet ordre</h3>
+                <h3>Slet artikel</h3>
             </td>
         </tr>
     </table>

@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DeleteSupplier.aspx.cs" Inherits="XAF.DeleteSupplier" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DeleteUser.aspx.cs" Inherits="XAF.DeleteUser" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table>
         <tr>
             <td>
-                <h3>Slet leverandør</h3>
+                <h3>Slet bruger</h3>
             </td>
         </tr>
     </table>
@@ -14,12 +14,12 @@
             <td>
                 <table>
                     <tr>
-                        <td>Leverandør nummer:</td>
-                        <td><asp:Textbox id="txtSupplierID" runat="server" /></td>
+                        <td>Bruger ID:</td>
+                        <td><asp:Textbox id="txtUserID" runat="server" /></td>
                     </tr>
                     <tr>
                         <td align="center" colspan="2">
-                        <asp:Button id="btnDeleteSupplier" text="Slet" runat="server" onclick="btnDeleteSupplier_Click" /></td>
+                        <asp:Button id="btnDeleteUser" text="Slet" runat="server" onclick="btnDeleteUser_Click" /></td>
                     </tr>
                 </table>
             </td>

@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace XAF
 {
-    public partial class DeleteSupplier : System.Web.UI.Page
+    public partial class DeleteUser : System.Web.UI.Page
     {
-        int sID;
+        int uID;
         LogicManager logicMgr;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -17,11 +17,11 @@ namespace XAF
             logicMgr = LogicManager.GetLogicMgrInstance();
         }
 
-        protected void btnDeleteSupplier_Click(object sender, EventArgs e)
+        protected void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            sID = Convert.ToInt32(txtSupplierID.Text);
+            uID = Convert.ToInt32(txtUserID.Text);
 
-            logicMgr.DeactivateSupplier(sID);
+            logicMgr.DeactivateUser(uID);
         }
     }
 }
