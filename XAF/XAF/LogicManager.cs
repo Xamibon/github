@@ -51,7 +51,7 @@ namespace XAF
         /// Is parsing the SupplierSE as a string to the DAL class
         /// </summary>
         /// <param name="supplierSE">The supplier SE.</param>
-        public void DeleteSupplier(String supplierSE)
+        public void DeactivateSupplier(String supplierSE)
         {
             _logicMgrIDAL.DeleteSupplier(supplierSE);
         }
@@ -207,7 +207,7 @@ namespace XAF
         /// Sends a user object to the DAL class for deletion.
         /// </summary>
         /// <param name="user">Expecting a user object.</param>
-        public void DeleteUser(User user)
+        public void DeactivateUser(User user)
         {
             _logicMgrIDAL.DeleteUser(user);
         }
