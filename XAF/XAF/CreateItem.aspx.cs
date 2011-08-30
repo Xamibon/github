@@ -32,9 +32,21 @@ namespace XAF
             iDesc = txtItemDescription.Text;
             iStock = Convert.ToInt32(txtItemStock.Text);
             iSuppID = Convert.ToInt32(txtItemSupplierID.Text);
-            iPrice = Convert.ToDecimal(txtItemPrice);
+            iPrice = Convert.ToDecimal(txtItemPrice.Text.Replace('.', ','));
 
             logicMgr.CreateItem(iID, iName, iDesc, iStock, iSuppID, iPrice);
+
+            CleanUpTextboxes();
+        }
+
+        protected void CleanUpTextboxes()
+        {
+            txtItemDescription.Text = "";
+            txtItemID.Text = "";
+            txtItemName.Text = "";
+            txtItemPrice.Text = "";
+            txtItemStock.Text = "";
+            txtItemSupplierID.Text = "";
         }
     }
 }
