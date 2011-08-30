@@ -13,5 +13,15 @@ namespace XAF
         {
 
         }
+
+        protected void btnCreateSupplier_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateSupplier.aspx");
+        }
+
+        protected void btnSearchSupplier_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SearchSupplier.aspx");
+        }
     }
 }

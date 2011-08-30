@@ -23,5 +23,10 @@ namespace XAF
         {
             Response.Redirect("SearchItem.aspx");
         }
+
+        protected void CreateItem_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

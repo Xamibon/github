@@ -1,18 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Suppliers.aspx.cs" Inherits="XAF.Suppliers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <script language="javascript" type="text/javascript">
-// <![CDATA[
-
-        function CreareSupplier_onclick() {
-            window.location = "CreateSupplier.aspx";
-        }
-
-        function SearchSupplier_onclick() {
-            window.location = "SearchSupplier.aspx";
-        }
-
-// ]]>
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table>
@@ -25,10 +12,12 @@
     <table>
         <tr>
             <td>
-                <input id="CreareSupplier" type="button" value="Opret leverandør" onclick="return CreareSupplier_onclick()" />
+                <asp:Button id="btnCreateSupplier" text="Opret leverandør" runat="server" 
+                    onclick="btnCreateSupplier_Click" />
             </td>
             <td>
-                <input id="SearchSupplier" type="button" value="Søg leverandør" onclick="return SearchSupplier_onclick()" />
+                <asp:Button id="btnSearchSupplier" text="Søg leverandør" runat="server" 
+                    onclick="btnSearchSupplier_Click" />
             </td>
         </tr>
     </table>

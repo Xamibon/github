@@ -41,9 +41,9 @@ namespace XAF
         /// Is parsing the Supplier object to the DAL class.
         /// </summary>
         /// <param name="supplier">Expecting an object of Supplier</param>
-        public void CreateSupplier(String supplierName, String supplierSE)
+        public void CreateSupplier(String supplierSE, String supplierName)
         {
-            _logicMgrSupplier = new Supplier(supplierName, supplierSE);
+            _logicMgrSupplier = new Supplier(supplierSE, supplierName);
             _logicMgrIDAL.CreateSupplier(_logicMgrSupplier);
         }
 
